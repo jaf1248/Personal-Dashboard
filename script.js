@@ -23,6 +23,33 @@ async function loadWeather() {
 }
 
 loadWeather();
+async function loadNews() {
+  const feedUrl = "https://jaf1248.github.io/it-daily-rss/security.xml";
+
+  const response = await fetch(
+    "https://api.allorigins.win/get?url=" + encodeURIComponent(feedUrl)
+  );
+
+  const data = await response.json();
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(data.contents, "text/xml");
+
+  const items = xml.querySelectorAll("item");
+  const list = document.getElementById("news");
+
+  list.innerHTML = "";
+
+  for (let i = 0; i < 5; i++) {
+    const title = items[i].querySelector("title").textContent;
+    const link = items[i].querySelector("link").textContent;
+
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${link}" target="_blank">${title}</a>`;
+    list.appendChild(li);
+  }
+}
+
+loadNews();
 
 // This is intentionally simple placeholder data.
 // Later, you can replace static sections with live feeds:
