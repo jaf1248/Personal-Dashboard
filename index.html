@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="dashboard">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Personal Dashboard</p>
+        <h1>Good morning, Joe</h1>
+        <p class="subtle" id="todayLine">Sunday, May 3</p>
+      </div>
+      <div class="hero-weather">
+        <span class="weather-icon">☁️</span>
+        <div>
+          <strong>62°</strong>
+          <p>Syracuse · Calm</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card calendar-card">
+        <div class="card-header">
+          <h2>Calendar</h2>
+          <span>Today</span>
+        </div>
+        <div class="event">
+          <strong>10:00 AM</strong>
+          <p>IT Ops Sync</p>
+        </div>
+        <div class="event">
+          <strong>11:30 AM</strong>
+          <p>Vendor Call</p>
+        </div>
+        <div class="event">
+          <strong>2:00 PM</strong>
+          <p>SharePoint SOP Review</p>
+        </div>
+        <div class="event muted">
+          <strong>4:30 PM</strong>
+          <p>Gym / Reset</p>
+        </div>
+      </article>
+
+      <article class="card task-card">
+        <div class="card-header">
+          <h2>Task of the Day</h2>
+          <span>Priority</span>
+        </div>
+        <h3>Finalize BCDR Executive Plan</h3>
+        <ul>
+          <li>Review vendor dependencies</li>
+          <li>Confirm recovery time objectives</li>
+          <li>Send clean draft to leadership</li>
+        </ul>
+      </article>
+
+      <article class="card headlines-card">
+        <div class="card-header">
+          <h2>Tech Headlines</h2>
+          <span>Briefing</span>
+        </div>
+        <ol>
+          <li>Microsoft expands Entra Conditional Access modernization.</li>
+          <li>New zero-day exploit affects enterprise VPN appliances.</li>
+          <li>Apple enterprise ID requests raise security review questions.</li>
+          <li>AI copilots continue moving into major SaaS platforms.</li>
+          <li>GitHub tightens workflow permission guidance.</li>
+        </ol>
+      </article>
+
+      <article class="card health-card">
+        <div class="card-header">
+          <h2>Health</h2>
+          <span>Daily</span>
+        </div>
+        <div class="stat-grid">
+          <div><strong>6,842</strong><p>Steps</p></div>
+          <div><strong>7h 12m</strong><p>Sleep</p></div>
+          <div><strong>62</strong><p>Resting BPM</p></div>
+          <div><strong>48 oz</strong><p>Hydration</p></div>
+        </div>
+      </article>
+
+      <article class="card weather-card">
+        <div class="card-header">
+          <h2>Weather</h2>
+          <span>Syracuse</span>
+        </div>
+        <div class="big-number">62°</div>
+        <p class="subtle">Cloudy, light breeze. High 68° / Low 51°</p>
+        <div class="weather-strip">
+          <span>9 AM<br><strong>58°</strong></span>
+          <span>Noon<br><strong>63°</strong></span>
+          <span>3 PM<br><strong>67°</strong></span>
+          <span>6 PM<br><strong>61°</strong></span>
+        </div>
+      </article>
+
+      <article class="card traffic-card">
+        <div class="card-header">
+          <h2>Traffic</h2>
+          <span>Commute</span>
+        </div>
+        <div class="big-number">18 min</div>
+        <p class="subtle">Light traffic to office. Minor delays near I-81 construction.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
